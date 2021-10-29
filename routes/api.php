@@ -43,3 +43,4 @@ route::delete("/animals", [AnimalController::class, 'delete']);
 
 //routing untuk students
 Route::get("/students", [StudentController::class, 'index']);
+Route::post("/students", [StudentController::class, 'store']);
