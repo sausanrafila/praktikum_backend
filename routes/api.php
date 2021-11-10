@@ -44,3 +44,12 @@ route::delete("/animals", [AnimalController::class, 'delete']);
 //routing untuk students
 Route::get("/students", [StudentController::class, 'index']);
 Route::post("/students", [StudentController::class, 'store']);
+route::get("/students/{id}",[StudentController::class,"show"]);
+#route menggunakan methode get karna ingin mengakses data kemudian
+#end point nya itu /studentd/, kemudian di endpointnya menangkap id yg akan dikirm
+#setelah itu dipangggil controllernya ,kesmudian simpan didalam methode show
+
+#method put, routr/student 
+route::put("/students/{id}",[StudentController::class, "update"]); #mau mengupdate itu put
+#membuat methode delete
+route::delete("/students/{id}",[StudentController::class, 'destroy']);
